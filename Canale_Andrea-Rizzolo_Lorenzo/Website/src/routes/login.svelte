@@ -27,7 +27,7 @@
 
 	async function doPost() {
 		var host = location.protocol + '//' + location.hostname;
-		fetch('http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/login', {
+		fetch('http://thecloud.duckdns.org:3001/login', {
 			method: 'post', // Default is 'get'
 			body: JSON.stringify({
 				username: user,
