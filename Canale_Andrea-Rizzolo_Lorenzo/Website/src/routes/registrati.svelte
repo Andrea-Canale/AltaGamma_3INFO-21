@@ -29,7 +29,7 @@
 	}
 	async function doPost() {
 		var host = location.protocol + '//' + location.hostname;
-		fetch('http://thecloud.duckdns.org:3001/login', {
+		fetch('http://thecloudagnelli.duckdns.org:3001/login', {
 			method: 'post', // Default is 'get'
 			body: JSON.stringify({
 				username: user,
@@ -80,7 +80,7 @@
 			console.log(pianosel[0]);
 			console.log(pianosel[1]);
 			console.log(pianosel[2]);
-			fetch('http://thecloud.duckdns.org:3001/register', {
+			fetch('http://thecloudagnelli.duckdns.org:3001/register', {
 				method: 'post', // Default is 'get'
 				body: JSON.stringify({
 					username: user,
