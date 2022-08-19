@@ -83,7 +83,7 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err);
 
-    res.send('<meta http-equiv="refresh" content="0; URL=http://thecloud.duckdns.org:3000/area/" />');
+    res.send('<meta http-equiv="refresh" content="0; URL=http://thecloudagnelli.duckdns.org:3000/area/" />');
   });
 });
 app.post("/deletefolder", function(req,res){
