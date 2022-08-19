@@ -35,7 +35,7 @@
 	
 		//console.log("NAME:"+name)
 		var host = location.protocol + '//' + location.hostname;
-		fetch('http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/folder', {
+		fetch('http://thecloud.duckdns.org:3001/folder', {
 			method: 'post', // Default is 'get'
 			body: JSON.stringify({
 				user: user,
@@ -55,7 +55,7 @@
 	function neu(nome) {
 		car = prompt('Inserire il nome della cartella che si vuole creare:');
 		var host = location.protocol + '//' + location.hostname;
-		fetch('http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/newfolder', {
+		fetch('http://thecloud.duckdns.org:3001/newfolder', {
 			method: 'post', // Default is 'get'
 			body: JSON.stringify({
 				user: user,
@@ -79,7 +79,7 @@
 			alert('Non puoi eliminare la cartella principale');
 		} else {
 			var host = location.protocol + '//' + location.hostname;
-			fetch('http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/deletefolder', {
+			fetch('http://thecloud.duckdns.org:3001/deletefolder', {
 				method: 'post', // Default is 'get'
 				body: JSON.stringify({
 					user: user,
@@ -138,7 +138,7 @@
 			<Cartella file={file} on:pr={(e) =>create(e)} />
 		{:else}
 			<a
-				href={'http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/' + user + name + file}
+				href={'http://thecloud.duckdns.org:3001/' + user + name + file}
 				><img src="file-removebg-preview.png" class="folderd" /></a
 			>
 			<span>{file}</span><br />
@@ -148,7 +148,7 @@
 <form
 	ref="uploadForm"
 	id="uploadForm"
-	action="http://ec2-15-160-169-49.eu-south-1.compute.amazonaws.com:3001/upload"
+	action="http://thecloud.duckdns.org:3001/upload"
 	method="post"
 	encType="multipart/form-data"
 	on:submit={sub}
